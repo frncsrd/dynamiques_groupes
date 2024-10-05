@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DYNAMIQUE DES GROUPES DE TRAVAIL</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Titre de l'application en haut -->
+    <header>
+        <h1 class="app-title">DYNAMIQUE DES GROUPES DE TRAVAIL</h1>
+    </header>
+
+    <div class="container">
+        <!-- Section en deux colonnes : graphe à gauche, texte à droite -->
+        <div class="flex-layout">
+            <!-- Colonne gauche : Graphe + Curseur -->
+            <section class="graph-section">
+                <!-- Question au-dessus du curseur -->
+                <p class="question">Combien de personnes y a-t-il dans votre réunion/séance de travail ?</p>
+                <div class="controls">
+                    <input type="range" id="numPeople" value="3" min="3" max="14" step="1" oninput="updateGraphAndMessage()">
+                    <p id="numDisplay">3</p>
+                </div>
+
+                <div id="graph"></div>
+            </section>
+
+            <!-- Colonne droite : Texte explicatif -->
+            <section class="text-section">
+                <h2>Le nombre de participants influence la qualité des échanges</h2>
+                <p class="intro-text">
+                    Comment la taille d’un groupe impacte la collaboration et l’efficacité. Plus il y a de personnes dans le groupe, plus les interactions non-verbales sont nombreuses, et la capacité à tous s’écouter chute drastiquement. Cette interface vous permet de visualiser à quel point les échanges deviennent difficiles au-delà de 5 participants.
+                </p>
+
+                <!-- Message dynamique qui change en fonction du nombre de participants -->
+                <div id="dynamicMessage" class="dynamic-message">
+                    À 3-5 personnes, les échanges sont encore fluides. Chacun peut s'exprimer et co-construire, les interactions sont riches et équilibrées.
+                </div>
+
+                <!-- Laïus spécifique qui change en fonction de la taille du groupe -->
+                <p id="specificMessage" class="specific-message">
+                    Avec 3 personnes, l'écoute est encore facile. Le groupe peut échanger efficacement et chaque participant peut se faire entendre.
+                </p>
+            </section>
+        </div>
+    </div>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
