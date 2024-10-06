@@ -1,0 +1,214 @@
+/* Importation de la police Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #000; /* Fond noir */
+    color: #FFF; /* Texte blanc */
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 30px; /* Réduction de l'espace supérieur */
+    padding: 0;
+    overflow-x: hidden; /* Empêche le débordement horizontal */
+}
+
+/* Conteneur principal centré en colonne */
+.container {
+    width: 100%; /* Largeur ajustée */
+    margin: 0 auto;
+    padding-top: 10px; /* Réduction de l'espace en haut du conteneur */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px; /* Réduction de l'espace entre les sections */
+}
+
+/* Titre de l'application avec grand texte */
+.title-section {
+    background-color: #000; /* Fond noir */
+    padding: 0px;
+    margin: 0 auto;
+    width: 100%;
+    text-align: left;
+}
+
+.app-title {
+    font-size: 2.5rem; /* Légère réduction de la taille du texte */
+    font-weight: 300; /* Texte léger pour un style élégant */
+    color: #FFF; /* Texte blanc */
+    margin: 0;
+    margin-bottom: 10px; /* Réduction de l'espace en dessous du titre */
+}
+
+/* Texte explicatif en gras et aligné à gauche */
+.text-section {
+    width: 100%; 
+    margin: 0 auto;
+    text-align: left;
+}
+
+.text-section h2 {
+    color: #FFF;
+    font-size: 1,8rem; /* Réduction de la taille du texte */
+    margin-bottom: 20px; /* Réduction de l'espace en dessous du texte explicatif */
+    text-align: left;
+    font-weight: 300;
+}
+
+.intro-text {
+    font-size: 1.2rem; /* Réduction de la taille du texte */
+    color: #FFF;
+    margin-bottom: 10px; /* Réduction de l'espace sous le texte */
+    font-weight: 300;
+}
+
+/* Section pour la question avec les boutons */
+.question {
+    font-size: 1.2rem;
+    color: #FFF;
+    background-color: #000;
+    text-align: center;
+    width: 100%;
+    padding: 0px;
+    margin-bottom: 15px; /* Réduction de l'espace en dessous de la question */
+    font-weight: 300;
+}
+
+/* Grille des boutons */
+.button-grid {
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: repeat(14, 1fr); /* Répartir les boutons en 4 colonnes */
+    gap: 5px; /* Réduction de l'écart entre les boutons */
+    width: 100%; /* Prendre toute la largeur */
+}
+
+.button-grid button {
+    padding: 15px; /* Réduction de la taille des boutons */
+    font-size: 1rem; /* Réduction de la taille du texte des boutons */
+    background-color: #444;
+    color: #FFF;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%; /* Assurer que chaque bouton prenne toute la largeur de la grille */
+}
+
+.button-grid button.active {
+    background-color: #FFF;
+    color: #000;
+}
+
+.button-grid button:hover {
+    background-color: #ffffff;
+    color: #000;
+}
+
+/* Style du graphe centré */
+#graph {
+    width: 500px;
+    height: 300px;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 50px; /* Réduction de l'espace au-dessus du graphe */
+    margin-bottom: 50px;
+}
+
+/* Nombre de connexions */
+.connection-number {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #FFF;
+    margin-bottom: 10px; /* Réduction de l'espace sous le nombre de connexions */
+}
+
+.connection-legend {
+    font-size: 1.5rem;
+    margin-left: 10px;
+    font-weight: bold;
+    color: #FFF;
+}
+
+/* Message dynamique */
+.dynamic-message {
+    padding: 10px; /* Légère réduction du padding */
+    color: #FFF;
+    background-color: #42915B;
+    border-radius: 20px;
+    font-size: 1rem; /* Réduction de la taille du texte */
+    width: 100%;
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px; /* Réduction de l'espace sous le message dynamique */
+    margin-top: 10px;
+    font-weight: 700;
+}
+
+.status {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 0px; /* Réduction de l'espace sous le statut */
+}
+
+.specific-message {
+    font-size: 1.2rem;
+    color: #FFF;
+    font-weight: 700;
+    width: 100%;
+}
+
+/* Image en bas du texte explicatif */
+.bottom-image {
+    width: 100%; /* L'image prend toute la largeur */
+    height: auto;
+    margin-top: 15px; /* Réduction de l'espace au-dessus de l'image */
+}
+
+/* Animation pour faire remonter les éléments avec un fondu */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px); /* Commence en dessous */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Position finale */
+    }
+}
+
+/* Classe d'animation */
+.fade-in-up {
+    opacity: 0; /* Cache les éléments au départ */
+    animation: fadeInUp 1s ease-out forwards; /* Animation en 1 seconde */
+}
+
+/* Style général des sections */
+section {
+    margin-bottom: 20px; /* Ajustement des marges si nécessaire */
+}
+/* Cacher les éléments avant l'animation */
+.fade-section {
+    opacity: 0;
+    transform: translateY(50px); /* Les déplacer vers le bas hors de vue */
+}
+
+/* Animation pour faire remonter les éléments avec un fondu */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px); /* Commence en dessous */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Position finale */
+    }
+}
+
+/* Classe d'animation */
+.fade-in-up {
+    animation: fadeInUp 1s ease-out forwards; /* Animation en 1 seconde */
+}

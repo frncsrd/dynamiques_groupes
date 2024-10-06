@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamique de Groupe en Réunion</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Titre de l'application avec fond orange -->
+    <header class="title-section fade-section">
+        <h1 class="app-title">Peut-on co-construire en réunion ?</h1>
+    </header>
+
+    <!-- Texte explicatif (après le titre) -->
+    <div class="text-section fade-section">
+        <h2>Le nombre de participants influence la qualité des échanges</h2>
+    
+    </div>
+
+    <div class="container">
+        <!-- Question + Boutons -->
+        <section class="fade-section">
+            <p class="question">Sélectionnez le nombre de personnes dans votre prochaine séance de travail</p>
+            <div class="controls">
+                <div class="button-grid">
+                    <button onclick="updateGraphAndMessage(3)">3</button>
+                    <button onclick="updateGraphAndMessage(4)">4</button>
+                    <button onclick="updateGraphAndMessage(5)">5</button>
+                    <button onclick="updateGraphAndMessage(6)">6</button>
+                    <button onclick="updateGraphAndMessage(7)">7</button>
+                    <button onclick="updateGraphAndMessage(8)">8</button>
+                    <button onclick="updateGraphAndMessage(9)">9</button>
+                    <button onclick="updateGraphAndMessage(10)">10</button>
+                    <button onclick="updateGraphAndMessage(11)">11</button>
+                    <button onclick="updateGraphAndMessage(12)">12</button>
+                    <button onclick="updateGraphAndMessage(13)">13</button>
+                    <button onclick="updateGraphAndMessage(14)">14</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Graphe centré -->
+        <section id="graph" class="fade-section"></section>
+
+        <!-- Nombre de connexions et légende -->
+        <div class="fade-section">
+            <span id="connectionNumber" class="connection-number">15</span>
+            <span class="connection-legend">interactions sociales</span>
+        </div>
+
+        <!-- Statut de co-construction dynamique -->
+        <div id="status" class="status fade-section">Co-construction efficace</div>
+
+        <!-- Message dynamique -->
+        <div id="dynamicMessage" class="dynamic-message fade-section">À 3-5 personnes, les échanges sont encore fluides. Chacun peut s'exprimer et co-construire, les interactions sont riches et équilibrées.</div>
+    </div>
+        
+    <!-- Script JS -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
