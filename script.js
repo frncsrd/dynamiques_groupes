@@ -94,28 +94,28 @@ function updateMessage(numPeople) {
     let specificMessage = "";
     switch (parseInt(numPeople)) {
         case 3:
-            specificMessage = "À 3, l'écoute est encore facile. Le groupe peut échanger efficacement et chaque participant peut se faire entendre.";
+            specificMessage = "Analyse : l'écoute est encore facile. Le groupe peut échanger efficacement et chaque participant peut se faire entendre.";
             break;
         case 4:
-            specificMessage = "À 4 , les interactions sont fluides mais commencent à nécessiter plus de structure pour éviter les interruptions.";
+            specificMessage = "Analyse : les interactions sont fluides mais commencent à nécessiter plus de structure pour éviter les interruptions.";
             break;
         case 5:
-            specificMessage = "À 5, la co-construction reste possible, mais il est nécessaire d'assurer une bonne répartition de la parole.";
+            specificMessage = "Analyse : la co-construction reste possible, mais il est nécessaire d'assurer une bonne répartition de la parole.";
             break;
         case 6:
-            specificMessage = "À 6, les échanges non-verbaux augmentent. Il devient plus difficile de garantir que chacun soit écouté.";
+            specificMessage = "Analyse : les échanges non-verbaux augmentent. Il devient plus difficile de garantir que chacun soit écouté.";
             break;
         case 7:
-            specificMessage = "À 7, l'organisation est clé. Les discussions deviennent plus descendantes et la participation active de chacun diminue.";
+            specificMessage = "Analyse : l'organisation est clé. Les discussions deviennent plus descendantes et la participation active de chacun diminue.";
             break;
         case 8:
-            specificMessage = "À 8, les échanges sont de plus en plus complexes. La gestion du temps et de la parole devient cruciale.";
+            specificMessage = "Analyse : les échanges sont de plus en plus complexes. La gestion du temps et de la parole devient cruciale.";
             break;
         case 9:
-            specificMessage = "À 9, les échanges se transforment en une suite d'informations descendantes. La co-construction devient difficile.";
+            specificMessage = "Analyse : les échanges se transforment en une suite d'informations descendantes. La co-construction devient difficile.";
             break;
         default:
-            specificMessage = "Au-delà de 9, les interactions sont majoritairement descendantes et les contributions individuelles sont limitées.";
+            specificMessage = "Analyse : au-delà de 9, les interactions sont majoritairement descendantes et les contributions individuelles sont limitées.";
             break;
     }
 
